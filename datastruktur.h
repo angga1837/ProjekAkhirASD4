@@ -92,7 +92,7 @@ public:
         int urutan = 1;
         cout << "\n=== ANTREAN REGISTRASI (QUEUE) ===\n";
         while (temp != nullptr) {
-            cout << urutan++ << ". " << temp->data.nama << " (" << temp->data.NIM << ")\n   Seminar: ";
+            cout << urutan++ << ". " << temp->data.nama << " (" << temp->data.NIM << ")" << " - " << temp->data.telp << "\nSeminar: ";
             for (const string& sem : temp->data.pilihan_seminar) cout << "[" << sem << "] ";
             cout << "\n";
             temp = temp->next;

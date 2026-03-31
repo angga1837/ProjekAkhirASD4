@@ -11,10 +11,11 @@ public:
     string email;
     string NIM;
     string prodi;
+    string telp;
     vector<string> pilihan_seminar; 
 
-    Peserta(string n = "", string e = "", string nim = "", string p = "")
-        : nama(n), email(e), NIM(nim), prodi(p) {}
+    Peserta(string n = "", string e = "", string nim = "", string p = "", string t = "")
+        : nama(n), email(e), NIM(nim), prodi(p), telp(t) {}
 };
 
 #endif

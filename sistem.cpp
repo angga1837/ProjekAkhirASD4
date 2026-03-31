@@ -50,6 +50,7 @@ void SistemSeminar::menuUser() {
             cout << "NIM          : "; getline(cin, p.NIM);
             cout << "Program Studi: "; getline(cin, p.prodi);
             cout << "Email        : "; getline(cin, p.email);
+            cout << "No. Telp     : "; getline(cin, p.telp);
             
             char tambahLagi;
             do {
@@ -96,6 +97,8 @@ void SistemSeminar::menuUser() {
                     cout << "- " << sem << "\n";
                 }
                 cout << "Status   : Menunggu verifikasi (Masih dalam antrean)\n";
+                cout << "NIM      : " << userDitemukan.NIM << endl;
+                cout << "No. Telp : " << userDitemukan.telp << endl;
             } else {
                 cout << "Akun tidak ditemukan di antrean (atau sudah diverifikasi).\n";
             }

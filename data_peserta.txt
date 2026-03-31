@@ -1,3 +1,3 @@
-S|Jundi Erlangga|jundierlangga@gmail.com|9193|Teknologi Informasi|Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,
-S|Yazid|angga@gmail.com|9190|Teknologi Informasi|How to hack with Kali,
-S|Bagas Anggareksa|bagasbagas@gmail.com|5612|Teknik Mesin|Workshop Penetration Testing Dasar,
+S|Jundi Erlangga|jundierlangga@gmail.com|9193|Teknologi Informasi|Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,|081212345678
+S|Yazid|angga@gmail.com|9190|Teknologi Informasi|How to hack with Kali,|081223571113
+S|Bagas Anggareksa|bagasbagas@gmail.com|5612|Teknik Mesin|Workshop Penetration Testing Dasar,|081267696769
