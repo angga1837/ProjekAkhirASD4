@@ -5,7 +5,8 @@
 #include <vector>
 #include <string>
 
-class SistemSeminar {
+class SistemSeminar
+{
 private:
     AntreanRegistrasi antrean;
     RiwayatVerifikasi riwayat;
@@ -13,8 +14,7 @@ private:
 
     void menuUser();
     void menuAdmin();
-    
-  
+
     void simpanData();
     void muatData();
 
