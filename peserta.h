@@ -5,17 +5,18 @@
 #include <vector>
 using namespace std;
 
-class Peserta {
+class Peserta
+{
 public:
     string nama;
     string email;
-    string NIM;
+    string NIU;
     string prodi;
     string telp;
-    vector<string> pilihan_seminar; 
+    vector<string> pilihan_seminar;
 
-    Peserta(string n = "", string e = "", string nim = "", string p = "", string t = "")
-        : nama(n), email(e), NIM(nim), prodi(p), telp(t) {}
+    Peserta(string n = "", string e = "", string niu = "", string p = "", string t = "")
+        : nama(n), email(e), NIU(niu), prodi(p), telp(t) {}
 };
 
 #endif

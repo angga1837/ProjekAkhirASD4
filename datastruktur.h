@@ -4,6 +4,8 @@
 #include "peserta.h"
 #include <iostream>
 
+using namespace std;
+
 class Node
 {
 public:
@@ -12,7 +14,7 @@ public:
     Node(Peserta p) : data(p), next(nullptr) {}
 };
 
-// stack
+// --- STACK (Untuk yang sudah diverifikasi) ---
 class RiwayatVerifikasi
 {
 private:
@@ -28,18 +30,34 @@ public:
         top = newNode;
     }
 
+    // Fungsi untuk cek status di Dashboard User (Sudah Verifikasi)
+    bool cariPeserta(string nama, string niu, Peserta &p)
+    {
+        Node *temp = top;
+        while (temp != nullptr)
+        {
+            if (temp->data.nama == nama && temp->data.NIU == niu)
+            {
+                p = temp->data;
+                return true;
+            }
+            temp = temp->next;
+        }
+        return false;
+    }
+
     void tampilkanSemua()
     {
         if (top == nullptr)
         {
-            cout << "Riwayat registrasi masih kosong.\n";
+            cout << "Riwayat pendaftaran masih kosong.\n";
             return;
         }
         Node *temp = top;
         cout << "\n=== RIWAYAT PESERTA DIVERIFIKASI ===\n";
         while (temp != nullptr)
         {
-            cout << "Nama   : " << temp->data.nama << " (" << temp->data.NIM << ")\n";
+            cout << "Nama   : " << temp->data.nama << " (" << temp->data.NIU << ")\n";
             cout << "Seminar: ";
             for (const string &sem : temp->data.pilihan_seminar)
                 cout << "- " << sem << " ";
@@ -52,20 +70,20 @@ public:
     {
         if (top == nullptr)
         {
-            cout << "Belum ada peserta yang diproses.\n";
+            cout << "Belum ada peserta yang diverifikasi.\n";
         }
         else
         {
-            cout << "\nPeserta Terakhir Diproses:\n";
+            cout << "\nPeserta Terakhir Diverifikasi:\n";
             cout << "Nama   : " << top->data.nama << "\n";
-            cout << "NIM    : " << top->data.NIM << "\n";
+            cout << "NIU    : " << top->data.NIU << "\n";
         }
     }
 
     Node *getTop() { return top; }
 };
 
-// queue
+// --- QUEUE (Untuk yang masih antre) ---
 class AntreanRegistrasi
 {
 private:
@@ -102,6 +120,22 @@ public:
         return true;
     }
 
+    // Fungsi untuk cek status di Dashboard User (Masih Antre)
+    bool cariPeserta(string nama, string niu, Peserta &p)
+    {
+        Node *temp = front;
+        while (temp != nullptr)
+        {
+            if (temp->data.nama == nama && temp->data.NIU == niu)
+            {
+                p = temp->data;
+                return true;
+            }
+            temp = temp->next;
+        }
+        return false;
+    }
+
     void tampilkan()
     {
         if (front == nullptr)
@@ -111,30 +145,15 @@ public:
         }
         Node *temp = front;
         int urutan = 1;
-cout << "\n=== ANTREAN REGISTRASI (QUEUE) ===\n";
-while (temp != nullptr)
-{
-    cout << urutan++ << ". " << temp->data.nama << " (" << temp->data.NIM << ")\n   Seminar: ";
-    for (const string &sem : temp->data.pilihan_seminar)
-        cout << "[" << sem << "] ";
-    cout << "\n";
-    temp = temp->next;
-}
-    }
-
-    bool cariPeserta(string nama, string nim, Peserta &p)
-    {
-        Node *temp = front;
+        cout << "\n=== ANTREAN REGISTRASI ===\n";
         while (temp != nullptr)
         {
-            if (temp->data.nama == nama && temp->data.NIM == nim)
-            {
-                p = temp->data;
-                return true;
-            }
+            cout << urutan++ << ". " << temp->data.nama << " (" << temp->data.NIU << ")\n   Seminar: ";
+            for (const string &sem : temp->data.pilihan_seminar)
+                cout << "[" << sem << "] ";
+            cout << "\n";
             temp = temp->next;
         }
-        return false;
     }
 
     Node *getFront() { return front; }
