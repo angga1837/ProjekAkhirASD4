@@ -1,3 +1,4 @@
-S|Jundi Erlangga|jundierlangga@gmail.com|9193|Teknologi Informasi|Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,|081212345678
-S|Yazid|angga@gmail.com|9190|Teknologi Informasi|How to hack with Kali,|081223571113
-S|Bagas Anggareksa|bagasbagas@gmail.com|5612|Teknik Mesin|Workshop Penetration Testing Dasar,|081267696769
+S|Nida Nur Hafizhah|nida@example.com|081391286828|562156|Teknologi Informasi|Sistem Embedded & IoT dengan ESP32,
+S|Bagas Anggareksa|bagas@example.com|081234567890|561556|Teknik Mesin|Workshop Penetration Testing Dasar,
+S|Timot Ronald|timot@example.com|089743215678|560897|Teknik Geodesi|Workshop Penetration Testing Dasar,
+S|Jundi Erlangga|angga@example.com|087612345678|562456|Geografi Lingkungan|Pengenalan YOLOv8 untuk Computer Vision,
