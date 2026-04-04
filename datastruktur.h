@@ -205,4 +205,8 @@ public:
     Node *getFront() { return front; }
 };
 
+void clearline() ;
+
+void pressEnterToContinue();
+
 #endif

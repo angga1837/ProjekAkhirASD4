@@ -44,13 +44,19 @@ void SistemSeminar::jalankan()
         cout << "Pilih: ";
         cin >> mode;
 
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+
         if (mode == 1)
             menuUser();
         else if (mode == 2)
             menuAdmin();
 
     } while (mode != 0);
-    cout << "Menyimpan data... Terima kasih!\n";
+    cout << "\nMenyimpan data... Terima kasih!\n";
 }
 
 void SistemSeminar::menuUser()
@@ -65,6 +71,11 @@ void SistemSeminar::menuUser()
         cout << "Pilih: ";
         cin >> pilihan;
         cin.ignore();
+
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
 
         if (pilihan == 1)
         {
@@ -94,21 +105,47 @@ void SistemSeminar::menuUser()
                 cin >> pilihSem;
                 cin.ignore();
 
+                clearline ();
+                clearline ();
+                clearline ();
+                for (size_t i = 0; i < daftar_seminar.size(); i++)
+                {
+                    clearline ();
+                }
+
                 if (pilihSem > 0 && pilihSem <= (int)daftar_seminar.size())
                 {
                     p.pilihan_seminar.push_back(daftar_seminar[pilihSem - 1]);
-                    cout << ">> Seminar ditambahkan!\n";
+                    cout << "\n>> Seminar ditambahkan!";
                 }
-                cout << "Ingin daftar seminar lain? (y/n): ";
+                cout << "\nIngin daftar seminar lain? (y/n): ";
                 cin >> tambahLagi;
                 cin.ignore();
+                clearline ();
+                clearline ();
+
             } while (tambahLagi == 'y' || tambahLagi == 'Y');
 
             if (!p.pilihan_seminar.empty())
             {
                 antrean.enqueue(p);
                 cout << ">> Berhasil mendaftar! Silahkan menunggu verifikasi.\n";
+                pressEnterToContinue ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
             }
+
+
         }
         else if (pilihan == 2)
         {
@@ -118,6 +155,13 @@ void SistemSeminar::menuUser()
             getline(cin, loginNama);
             cout << "Masukkan NIU : ";
             getline(cin, loginNIU);
+
+            clearline ();
+            clearline ();
+            clearline ();
+            clearline ();
+            clearline ();
+            clearline ();
 
             Peserta userDitemukan;
             // check in queue
@@ -141,9 +185,19 @@ void SistemSeminar::menuUser()
             else
             {
                 cout << "\n[!] Akun tidak ditemukan.\n";
+                pressEnterToContinue ();
+                clearline ();
+                clearline ();
+                clearline ();
             }
         }
     } while (pilihan != 0);
+    clearline ();
+    clearline ();
+    clearline ();
+    clearline ();
+    clearline ();
+    clearline ();
 }
 
 void SistemSeminar::menuAdmin()
@@ -280,7 +334,6 @@ void SistemSeminar::muatData()
 
 void SistemSeminar::countdown() {
     cout << "\n--- COUNTDOWN WORKSHOP ---\n";
-    cout << "Tekan q lalu Enter untuk kembali ke menu utama.\n";
 
     while (true) {
         auto sekarang = chrono::system_clock::now();
@@ -288,6 +341,9 @@ void SistemSeminar::countdown() {
 
         if (durasi.count() <= 0) {
             cout << "Workshop sudah dimulai!\n";
+            clearline ();
+            clearline ();
+            clearline ();
             break;
         }
 
@@ -297,20 +353,34 @@ void SistemSeminar::countdown() {
         long long menit = (total_detik % 3600) / 60;
         long long detik = total_detik % 60;
 
-        cout << "\rWaktu tersisa: " << hari << " hari, "
+        cout << "Waktu tersisa: " << hari << " hari, "
              << jam << " jam, "
              << menit << " menit, "
-             << detik << " detik. ";
+             << detik << " detik. \n";
         cout.flush();
 
-        if (cin.peek() == 'q') {
-            cin.ignore();
-            break;
-        }
+        pressEnterToContinue ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        break;
 
-        for(int i = 0; i < 1000000000; i++) {}
-    
     }
 
     cout << "\nKembali ke dashboard.\n";
+    pressEnterToContinue ();
+    clearline ();
+    clearline ();
+}
+
+void clearline() {
+    std::cout << "\033[A\033[2K";
+    std::flush(std::cout);
+}
+
+void pressEnterToContinue() {
+    cout << "\nPress Enter to continue...";
+    cin.get();
+    clearline ();
 }
