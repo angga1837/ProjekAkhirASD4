@@ -116,6 +116,11 @@ void SistemSeminar::menuUser()
             {
                 cout << "\n=== DASHBOARD USER ===\n";
                 cout << "Halo, " << userDitemukan.nama << "!\n";
+                cout << "NIU   : " << userDitemukan.NIU << endl;
+                cout << "Prodi : " << userDitemukan.prodi << endl;
+                cout << "Email : " << userDitemukan.email << endl;
+                cout << "No. HP: " << userDitemukan.telp << endl;
+                cout << endl;
                 cout << "Status: MENUNGGU VERIFIKASI\n";
                 cout << "Harap ditunggu, pendaftaran Anda masih dalam proses verifikasi.\n";
             }
@@ -124,6 +129,11 @@ void SistemSeminar::menuUser()
             {
                 cout << "\n=== DASHBOARD USER ===\n";
                 cout << "Halo, " << userDitemukan.nama << "!\n";
+                cout << "NIU   : " << userDitemukan.NIU << endl;
+                cout << "Prodi : " << userDitemukan.prodi << endl;
+                cout << "Email : " << userDitemukan.email << endl;
+                cout << "No. HP: " << userDitemukan.telp << endl;
+                cout << endl;
                 cout << "STATUS: TERVERIFIKASI\n";
                 cout << "Selamat pendaftaran Anda telah diverifikasi!\n";
             }
