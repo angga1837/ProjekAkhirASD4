@@ -1,0 +1,4 @@
+Q|Jundi Angga|jundi@gmail.com|081267676767|676767|Teknik Nyawit|Kali Linux Fundamental,Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,
+S|Timot Ronald|timot@example.com|089743215678|560897|Teknik Geodesi|Workshop Penetration Testing Dasar,
+S|Bagas Anggareksa|bagas@example.com|081234567890|561556|Teknik Mesin|Workshop Penetration Testing Dasar,
+S|Nida Nur Hafizhah|nida@example.com|081391286828|562156|Teknologi Informasi|Sistem Embedded & IoT dengan ESP32,

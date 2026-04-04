@@ -176,6 +176,17 @@ void SistemSeminar::menuUser()
                 cout << "Status: MENUNGGU VERIFIKASI\n";
                 cout << "Harap ditunggu, pendaftaran Anda masih dalam proses verifikasi.\n";
                 countdown();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
             }
             // check in stack
             else if (riwayat.cariPeserta(loginNama, loginNIU, userDitemukan))
@@ -190,6 +201,17 @@ void SistemSeminar::menuUser()
                 cout << "STATUS: TERVERIFIKASI\n";
                 cout << "Selamat pendaftaran Anda telah diverifikasi!\n";
                 countdown();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
+                clearline ();
             }
             else
             {
