@@ -2,8 +2,6 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
-
 using namespace std;
 
 // load data from file when program opened
@@ -28,6 +26,7 @@ SistemSeminar::~SistemSeminar()
 {
     simpanData();
 }
+
 
 void SistemSeminar::jalankan()
 {
@@ -169,6 +168,11 @@ void SistemSeminar::menuUser()
             {
                 cout << "\n=== DASHBOARD USER ===\n";
                 cout << "Halo, " << userDitemukan.nama << "!\n";
+                cout << "NIU   : " << userDitemukan.NIU << endl;
+                cout << "Prodi : " << userDitemukan.prodi << endl;
+                cout << "Email : " << userDitemukan.email << endl;
+                cout << "No. HP: " << userDitemukan.telp << endl;
+                cout << endl;
                 cout << "Status: MENUNGGU VERIFIKASI\n";
                 cout << "Harap ditunggu, pendaftaran Anda masih dalam proses verifikasi.\n";
                 countdown();
@@ -178,6 +182,11 @@ void SistemSeminar::menuUser()
             {
                 cout << "\n=== DASHBOARD USER ===\n";
                 cout << "Halo, " << userDitemukan.nama << "!\n";
+                cout << "NIU   : " << userDitemukan.NIU << endl;
+                cout << "Prodi : " << userDitemukan.prodi << endl;
+                cout << "Email : " << userDitemukan.email << endl;
+                cout << "No. HP: " << userDitemukan.telp << endl;
+                cout << endl;
                 cout << "STATUS: TERVERIFIKASI\n";
                 cout << "Selamat pendaftaran Anda telah diverifikasi!\n";
                 countdown();
@@ -200,6 +209,8 @@ void SistemSeminar::menuUser()
     clearline ();
 }
 
+
+
 void SistemSeminar::menuAdmin()
 {
     string inUser, inPass;
@@ -218,7 +229,7 @@ void SistemSeminar::menuAdmin()
     do
     {
         cout << "\n=== MENU ADMIN ===\n";
-        cout << "1. Lihat Antrean\n2. Verifikasi Peserta\n3. Lihat Riwayat\n4. Delete Peserta \n0. Log Out\nPilih: ";
+        cout << "1. Lihat Antrean\n2. Verifikasi Peserta\n3. Lihat Riwayat\n4. Delete Peserta \n5. Menambah Seminar\n6. Menhapus Seminar\n0. Log Out\nPilih: ";
         cin >> pilihan;
 
         if (pilihan == 1)
@@ -259,6 +270,43 @@ void SistemSeminar::menuAdmin()
             if (!ditemukan)
             {
                 cout << ">> Peserta dengan NIU tersebut tidak ditemukan.\n";
+            }
+        }else if(pilihan == 5){
+            cout << "\n--- TAMBAH SEMINAR ---\n";
+            cout << "Masukkan nama seminar baru: ";
+            cin.ignore();
+            string seminarBaru;
+            getline(cin, seminarBaru);
+            
+            daftar_seminar.push_back(seminarBaru);
+            cout << ">> Seminar '" << seminarBaru << "' berhasil ditambahkan!\n";
+        }else if(pilihan == 6){
+            cout << "\n--- HAPUS SEMINAR ---\n";
+            if (daftar_seminar.empty())
+            {
+                cout << "Tidak ada seminar yang tersedia untuk dihapus.\n";
+            }
+            else
+            {
+                cout << "Daftar Seminar Saat Ini:\n";
+                for (size_t i = 0; i < daftar_seminar.size(); i++)
+                {
+                    cout << i + 1 << ". " << daftar_seminar[i] << "\n";
+                }
+                
+                int hapusIndex;
+                cout << "Masukkan nomor seminar yang ingin dihapus (0 untuk batal): ";
+                cin >> hapusIndex;
+                
+                if (hapusIndex > 0 && hapusIndex <= (int)daftar_seminar.size())
+                {
+                    cout << ">> Seminar '" << daftar_seminar[hapusIndex - 1] << "' berhasil dihapus!\n";
+                    daftar_seminar.erase(daftar_seminar.begin() + (hapusIndex - 1));
+                }
+                else if (hapusIndex != 0)
+                {
+                    cout << "[!] Nomor tidak valid.\n";
+                }
             }
         }
     } while (pilihan != 0);

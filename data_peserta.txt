@@ -1,7 +1,0 @@
-Q|Tyo|kaisartyoagung@gmail.com|082146956116|556079|Kehutanan|Pengenalan YOLOv8 untuk Computer Vision,
-Q|Timothy|fd|231|22222|tg|Pengenalan YOLOv8 untuk Computer Vision,
-Q|Timothy Darren|timo@mail.is|082874|556068|Teknologi Informasi|Pengenalan YOLOv8 untuk Computer Vision,
-S|Nida Nur Hafizhah|nida@example.com|081391286828|562156|Teknologi Informasi|Sistem Embedded & IoT dengan ESP32,
-S|Bagas Anggareksa|bagas@example.com|081234567890|561556|Teknik Mesin|Workshop Penetration Testing Dasar,
-S|Timot Ronald|timot@example.com|089743215678|560897|Teknik Geodesi|Workshop Penetration Testing Dasar,
-S|Jundi Erlangga|angga@example.com|087612345678|562456|Geografi Lingkungan|Pengenalan YOLOv8 untuk Computer Vision,
