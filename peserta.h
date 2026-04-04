@@ -19,4 +19,8 @@ public:
         : nama(n), email(e), NIU(niu), prodi(p), telp(t) {}
 };
 
+void clearline() ;
+
+void pressEnterToContinue();
+
 #endif

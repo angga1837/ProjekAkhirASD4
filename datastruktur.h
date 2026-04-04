@@ -164,8 +164,12 @@ public:
         if (front == nullptr)
         {
             cout << "Antrean registrasi kosong.\n";
+            pressEnterToContinue();
+            clearline ();
+            clearline ();
             return;
         }
+        size_t pi = 0;
         Node *temp = front;
         int urutan = 1;
         cout << "\n=== ANTREAN REGISTRASI ===\n";
@@ -176,7 +180,18 @@ public:
                 cout << "[" << sem << "] ";
             cout << "\n";
             temp = temp->next;
+            pi ++;
         }
+        pressEnterToContinue();
+        clearline ();
+        clearline ();
+        clearline ();
+        while (pi > 0) {
+            clearline ();
+            clearline ();
+            pi --;
+        }
+
     }
     // Delete Peserta   
     bool hapusByNIU(string niu)
@@ -205,7 +220,7 @@ public:
     Node *getFront() { return front; }
 };
 
-void clearline() ;
+void clearline();
 
 void pressEnterToContinue();
 

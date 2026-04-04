@@ -240,12 +240,27 @@ void SistemSeminar::menuAdmin()
     cin >> inUser;
     cout << "Password: ";
     cin >> inPass;
+    cin.ignore();
 
     if (inUser != "admin" || inPass != "admin123")
     {
-        cout << "Login gagal!\n";
+        cout << "Login gagal!";
+        pressEnterToContinue ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
         return;
     }
+
+    clearline ();
+    clearline ();
+    clearline ();
+    clearline ();
 
     int pilihan;
     do
@@ -253,6 +268,17 @@ void SistemSeminar::menuAdmin()
         cout << "\n=== MENU ADMIN ===\n";
         cout << "1. Lihat Antrean\n2. Verifikasi Peserta\n3. Lihat Riwayat\n4. Delete Peserta \n5. Menambah Seminar\n6. Menhapus Seminar\n0. Log Out\nPilih: ";
         cin >> pilihan;
+        cin.ignore();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
+        clearline ();
 
         if (pilihan == 1)
             antrean.tampilkan();
@@ -319,6 +345,7 @@ void SistemSeminar::menuAdmin()
                 int hapusIndex;
                 cout << "Masukkan nomor seminar yang ingin dihapus (0 untuk batal): ";
                 cin >> hapusIndex;
+                cin.ignore();
                 
                 if (hapusIndex > 0 && hapusIndex <= (int)daftar_seminar.size())
                 {
