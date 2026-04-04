@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iostream>
 
+
 using namespace std;
 
 // load data from file when program opened
@@ -11,6 +12,14 @@ SistemSeminar::SistemSeminar()
     daftar_seminar.push_back("Pengenalan YOLOv8 untuk Computer Vision");
     daftar_seminar.push_back("Workshop Penetration Testing Dasar");
     daftar_seminar.push_back("Sistem Embedded & IoT dengan ESP32");
+    tm tm = {};
+    tm.tm_year = 2026 - 1900;
+    tm.tm_mon = 3;
+    tm.tm_mday = 30;
+    tm.tm_hour = 24;
+    tm.tm_min = 0;
+    tm.tm_sec = 0;
+    waktu_workshop = chrono::system_clock::from_time_t(std::mktime(&tm));
     muatData();
 }
 
@@ -118,6 +127,7 @@ void SistemSeminar::menuUser()
                 cout << "Halo, " << userDitemukan.nama << "!\n";
                 cout << "Status: MENUNGGU VERIFIKASI\n";
                 cout << "Harap ditunggu, pendaftaran Anda masih dalam proses verifikasi.\n";
+                countdown();
             }
             // check in stack
             else if (riwayat.cariPeserta(loginNama, loginNIU, userDitemukan))
@@ -126,6 +136,7 @@ void SistemSeminar::menuUser()
                 cout << "Halo, " << userDitemukan.nama << "!\n";
                 cout << "STATUS: TERVERIFIKASI\n";
                 cout << "Selamat pendaftaran Anda telah diverifikasi!\n";
+                countdown();
             }
             else
             {
@@ -240,4 +251,41 @@ void SistemSeminar::muatData()
             riwayat.push(p);
     }
     file.close();
+}
+
+void SistemSeminar::countdown() {
+    cout << "\n--- COUNTDOWN WORKSHOP ---\n";
+    cout << "Tekan q lalu Enter untuk kembali ke menu utama.\n";
+
+    while (true) {
+        auto sekarang = chrono::system_clock::now();
+        auto durasi = waktu_workshop - sekarang;
+
+        if (durasi.count() <= 0) {
+            cout << "Workshop sudah dimulai!\n";
+            break;
+        }
+
+        long long total_detik = durasi.count() / 1000000000LL;  
+        long long hari = total_detik / 86400;
+        long long jam = (total_detik % 86400) / 3600;
+        long long menit = (total_detik % 3600) / 60;
+        long long detik = total_detik % 60;
+
+        cout << "\rWaktu tersisa: " << hari << " hari, "
+             << jam << " jam, "
+             << menit << " menit, "
+             << detik << " detik. ";
+        cout.flush();
+
+        if (cin.peek() == 'q') {
+            cin.ignore();
+            break;
+        }
+
+        for(int i = 0; i < 1000000000; i++) {}
+    
+    }
+
+    cout << "\nKembali ke dashboard.\n";
 }
