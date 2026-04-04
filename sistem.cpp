@@ -164,7 +164,7 @@ void SistemSeminar::menuAdmin()
     do
     {
         cout << "\n=== MENU ADMIN ===\n";
-        cout << "1. Lihat Antrean\n2. Verifikasi Peserta\n3. Lihat Riwayat\n0. Log Out\nPilih: ";
+        cout << "1. Lihat Antrean\n2. Verifikasi Peserta\n3. Lihat Riwayat\n4. Delete Peserta \n0. Log Out\nPilih: ";
         cin >> pilihan;
 
         if (pilihan == 1)
@@ -182,6 +182,31 @@ void SistemSeminar::menuAdmin()
         }
         else if (pilihan == 3)
             riwayat.tampilkanSemua();
+        else if (pilihan == 4) 
+        {
+            string niu;
+            cout << "Masukkan NIU peserta yang ingin dihapus: ";
+            cin >> niu;
+
+            bool ditemukan = false;
+
+            if (antrean.hapusByNIU(niu))
+            {
+                cout << ">> Peserta berhasil dihapus dari antrean.\n";
+                ditemukan = true;
+            }
+
+            if (riwayat.hapusByNIU(niu))
+            {
+                cout << ">> Peserta berhasil dihapus dari riwayat.\n";
+                ditemukan = true;
+            }
+
+            if (!ditemukan)
+            {
+                cout << ">> Peserta dengan NIU tersebut tidak ditemukan.\n";
+            }
+        }
     } while (pilihan != 0);
 }
 

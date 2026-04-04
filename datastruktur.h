@@ -79,6 +79,29 @@ public:
             cout << "NIU    : " << top->data.NIU << "\n";
         }
     }
+    // Delete Peserta
+    bool hapusByNIU(string niu)
+    {
+        Node *curr = top;
+        Node *prev = nullptr;
+
+        while (curr != nullptr)
+        {
+            if (curr->data.NIU == niu)
+            {
+                if (prev == nullptr)
+                    top = curr->next;
+                else
+                    prev->next = curr->next;
+
+                delete curr;
+                return true;
+            }
+            prev = curr;
+            curr = curr->next;
+        }
+        return false;
+    }
 
     Node *getTop() { return top; }
 };
@@ -154,6 +177,29 @@ public:
             cout << "\n";
             temp = temp->next;
         }
+    }
+    // Delete Peserta   
+    bool hapusByNIU(string niu)
+    {
+        Node *curr = front;
+        Node *prev = nullptr;
+
+        while (curr != nullptr)
+        {
+            if (curr->data.NIU == niu)
+            {
+                if (prev == nullptr) // hapus di depan
+                    front = curr->next;
+                else
+                    prev->next = curr->next;
+
+                delete curr;
+                return true;
+            }
+            prev = curr;
+            curr = curr->next;
+        }
+        return false;
     }
 
     Node *getFront() { return front; }
