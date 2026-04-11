@@ -1,4 +1,4 @@
-# 📌 Projek Akhir ASD 4  
+# 📌 Proyek Akhir ASD 4  
 ## SENORA: SEMINAR AND WORKSHOP REGISTRATION APPLICATION
 
 ---
