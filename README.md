@@ -34,10 +34,10 @@ Sistem ini memungkinkan pengguna (User) untuk melakukan registrasi dan memilih s
 
 ---
 
-### 🚀 Cara Menjalankan Program
+### 🚀 Cara Menjalankan Aplikasi
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/ProjekAkhirASD4.git
+   git clone https://github.com/angga1837/ProjekAkhirASD4
 2. Compile program:
    ```bash
    g++ main.cpp sistem.cpp -o SENORA
