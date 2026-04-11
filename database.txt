@@ -5,8 +5,8 @@ SEMINAR|Cara Dapat A di PVA|Daring via Zoom|Wafdan Taqqiya|2026-04-11 10:00
 SEMINAR|Excel Fundamental|Daring via Zoom|Muhammad Aqila S.E.|2026-04-11 07:00
 Q|Timothy Ronlad|Timot@gmail.com|081290875643|101010|Teknologi Infromasi|Cara Dapat A di PVA,
 Q|Hadian Reza|reza@gmail.com|081144556677|171017|Akutansi|Workshop Penetration Testing Dasar,
-S|Jundi Angga|jundi@gmail.com|081267676767|676767|Teknik Nyawit|Sistem Embedded & IoT dengan ESP32,Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,
-S|Nida Nur Hafizhah|nida@example.com|081391286828|562156|Teknologi Informasi|Sistem Embedded & IoT dengan ESP32,
-S|Bagas Anggareksa|bagas@example.com|081234567890|561556|Teknik Mesin|Workshop Penetration Testing Dasar,
-S|Timot Ronald|timot@example.com|089743215678|560897|Teknik Geodesi|Workshop Penetration Testing Dasar,
 S|Prabowo Rakabuming|wowo@gmail.com|081219451945|541117|Teknik Nyawit|Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,
+S|Timot Ronald|timot@example.com|089743215678|560897|Teknik Geodesi|Workshop Penetration Testing Dasar,
+S|Bagas Anggareksa|bagas@example.com|081234567890|561556|Teknik Mesin|Workshop Penetration Testing Dasar,
+S|Nida Nur Hafizhah|nida@example.com|081391286828|562156|Teknologi Informasi|Sistem Embedded & IoT dengan ESP32,
+S|Jundi Angga|jundi@gmail.com|081267676767|676767|Teknik Nyawit|Sistem Embedded & IoT dengan ESP32,Pengenalan YOLOv8 untuk Computer Vision,Workshop Penetration Testing Dasar,

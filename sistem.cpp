@@ -151,6 +151,7 @@ void SistemSeminar::menuUser()
  
                 clearline(); 
                 clearline(); 
+                clearline();
                 clearline(); 
                 for (size_t i = 0; i < daftar_seminar.size(); i++)
                 {
