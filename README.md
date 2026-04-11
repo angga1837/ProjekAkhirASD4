@@ -38,3 +38,7 @@ Sistem ini memungkinkan pengguna (User) untuk melakukan registrasi dan memilih s
 1. Clone repository ini:
    ```bash
    git clone https://github.com/username/ProjekAkhirASD4.git
+2. Compile program:
+   g++ main.cpp sistem.cpp -o SENORA
+4. Jalankan program:
+   ./SENORA
