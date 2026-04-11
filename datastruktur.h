@@ -14,7 +14,7 @@ public:
     Node(Peserta p) : data(p), next(nullptr) {}
 };
 
-// --- STACK (Untuk yang sudah diverifikasi) ---
+// STACK (Untuk yang sudah diverifikasi)
 class RiwayatVerifikasi
 {
 private:
@@ -30,7 +30,7 @@ public:
         top = newNode;
     }
 
-    // Fungsi untuk cek status di Dashboard User (Sudah Verifikasi)
+    //cek status di Dashboard User (Sudah Verifikasi)
     bool cariPeserta(string nama, string niu, Peserta &p)
     {
         Node *temp = top;
@@ -106,7 +106,7 @@ public:
     Node *getTop() { return top; }
 };
 
-// --- QUEUE (Untuk yang masih antre) ---
+// QUEUE (Untuk yang masih antre)
 class AntreanRegistrasi
 {
 private:
@@ -143,7 +143,7 @@ public:
         return true;
     }
 
-    // Fungsi untuk cek status di Dashboard User (Masih Antre)
+    // untuk cek status di Dashboard User (Masih Antre)
     bool cariPeserta(string nama, string niu, Peserta &p)
     {
         Node *temp = front;
